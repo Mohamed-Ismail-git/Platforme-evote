@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+ <display-name>RegistrationMVC</display-name>
+ <!-- encodage utf-8 -->
+<jsp-config>
+    <jsp-property-group>
+        <url-pattern>*.jsp</url-pattern>
+        <page-encoding>UTF-8</page-encoding>
+    </jsp-property-group>
+</jsp-config>
+ <session-config>
+    <session-timeout>10</session-timeout>
+  </session-config>
+ <welcome-file-list>
+ <welcome-file>index1.jsp</welcome-file>      <!--which file is loaded first-->
+ </welcome-file-list>
+ 
+ <servlet>
+  <description></description>
+  <display-name>Gerer_authentification_carte_id_Servlet</display-name>
+  <servlet-name>Gerer_authentification_carte_id_Servlet</servlet-name>
+  <servlet-class>com.usthb.controller.Gerer_authentification_carte_id_Servlet</servlet-class>
+ </servlet>
+ <servlet>
+ 	<description>
+ 	</description>
+ 	<display-name>Traiter_user_vote_Servlet</display-name>
+ 	<servlet-name>Traiter_user_vote_Servlet</servlet-name>
+ 	<servlet-class>com.usthb.controller.Traiter_user_vote_Servlet</servlet-class>
+ </servlet>
+ <servlet>
+ 	<description>
+ 	</description>
+ 	<display-name>Verifier_Personnel_Servlet</display-name>
+ 	<servlet-name>Verifier_Personnel_Servlet</servlet-name>
+ 	<servlet-class>com.usthb.controller.Verifier_Personnel_Servlet</servlet-class>
+ </servlet>
+ <servlet>
+ 	<description>
+ 	</description>
+ 	<display-name>LoginServlet</display-name>
+ 	<servlet-name>LoginServlet</servlet-name>
+ 	<servlet-class>com.usthb.controller.LoginServlet</servlet-class>
+ </servlet>
+ <servlet>
+ 	<description>
+ 	</description>
+ 	<display-name>Generer_cryptage_Servlet</display-name>
+ 	<servlet-name>Generer_cryptage_Servlet</servlet-name>
+ 	<servlet-class>com.usthb.controller.Generer_cryptage_Servlet</servlet-class>
+ </servlet>
+
+
+ <servlet-mapping>
+ <servlet-name>Gerer_authentification_carte_id_Servlet</servlet-name>
+ <url-pattern>/Gerer_authentification_carte_id_Servlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+ 	<servlet-name>Traiter_user_vote_Servlet</servlet-name>
+ 	<url-pattern>/Traiter_user_vote_Servlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+ 	<servlet-name>Verifier_Personnel_Servlet</servlet-name>
+ 	<url-pattern>/Verifier_Personnel_Servlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+ 	<servlet-name>LoginServlet</servlet-name>
+ 	<url-pattern>/LoginServlet</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+ 	<servlet-name>Generer_cryptage_Servlet</servlet-name>
+ 	<url-pattern>/Generer_cryptage_Servlet</url-pattern>
+ </servlet-mapping>
+
+ <filter>
+    <filter-name>CharsetFilter</filter-name>
+    <filter-class>com.usthb.controller.CharsetFilter</filter-class>
+      <init-param>
+        <param-name>requestEncoding</param-name>
+        <param-value>UTF-8</param-value>
+      </init-param>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>CharsetFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+</web-app>

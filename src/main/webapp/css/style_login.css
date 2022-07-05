@@ -1,0 +1,66 @@
+img { 
+                max-width:100%; 
+                /*height:auto; */
+            } 
+  .submitbutton{
+  display: inline-block;
+  padding: 6px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #673AB7;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+ 
+ .submitbutton:hover {background-color: #673AB7;}
+
+.submitbutton:active {
+  background-color: #673AB7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.resetbutton{
+  display: inline-block;
+  padding: 6px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #FA5858;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+ 
+ .resetbutton:hover {background-color: #ff5555;}
+
+.resetbutton:active {
+  background-color: #FF0000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.bg-custom {
+	background-color:#673AB7;
+}
+.text-custom{
+	color:#673AB7;
+}
+.border-custom{
+	color:#673AB7;
+}
+.btn-outline-info{
+    color: #673AB7 !important;
+    border: 1px solid #673AB7 !important;
+}
+.btn-outline-info:hover, .btn-outline-info:active, .btn-outline-info:visited {  /*changer couleur des buttons*/
+	color:white !important;
+	
+}
